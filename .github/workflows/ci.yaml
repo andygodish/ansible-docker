@@ -13,17 +13,7 @@ on:
       - "adr/**"
       - "docs/**"
       - "CODEOWNERS"
-  pull_request:
-    branches: [ "main" ]
-    paths-ignore:
-      - "**.md"
-      - "**.jpg"
-      - "**.png"
-      - "**.gif"
-      - "**.svg"
-      - "adr/**"
-      - "docs/**"
-      - "CODEOWNERS"
+      - ".github/**"
 
 permissions:
   contents: write
@@ -42,3 +32,5 @@ jobs:
       uses: go-semantic-release/action@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        force-bump-patch-version: true

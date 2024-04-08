@@ -50,3 +50,5 @@ sensitive.md
 
 **/variables.pkrvars.hcl
 ##### END PACKER ######
+
+**/playbooks/*
